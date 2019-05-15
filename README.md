@@ -21,13 +21,13 @@ DockBuilder allows for the building of a user's Dock based on an organization's 
     - You must install the command line tool associated with Platypus. Open Platypus, in the Menu Bar choose "Platypus" > "Preferences" and click the "Install" button to install the Platypus command line tool.
 - jamfHelper: jamfHelper is used to display the message when the Dock is being built (if you choose to use that feature). CocoaDialog could also be leveraged pretty easily for environments without Jamf Pro. AppleScript could also be used, but you can't create an AppleScript dialog void of buttons.
 
-*Note: [Dockutil](https://github.com/ryangball/DockBuilder#Dockutil) is also required, but included in the resulting .pkg and releases.*
+*Note: [Dockutil](https://github.com/canalnoises/PSD-DockBuilder#Dockutil) is also required, but included in the resulting .pkg and releases.*
 
 ## Build Project
 To build new versions you can simply run the [build.sh](/build.sh) script and specify a version number for both the .app and .pkg. The resulting .pkg will include the LaunchAgent and .app as well as necessary preinstall/postinstall scripts. If you do not include a version number as a parameter then version 1.0 will be assigned as the default.
 ```bash
 # Clone the repo and traverse into the created directory
-git clone https://github.com/canalnoises/DockBuilder.git
+git clone https://github.com/canalnoises/PSD-DockBuilder.git
 cd DockBuilder
 
 # At this point you'd customize the variables in the build.sh script
@@ -71,7 +71,7 @@ In the event that this breadcrumb exists for a user, DockBuilder will exit witho
 ```bash
 rm ~/Library/Preferences/org.ldschurch.psd.dockbuilder.breadcrumb.plist
 ```
-Then you can simply run the /Applications/Utilities/DockBuilder.app or unload/load the LaunchAgent as per the [Testing](https://github.com/canalnoises/DockBuilder#Testing) section above.
+Then you can simply run the /Applications/Utilities/DockBuilder.app or unload/load the LaunchAgent as per the [Testing](https://github.com/canalnoises/PSD-DockBuilder#Testing) section above.
 
 ## Dockutil
 [Dockutil](https://github.com/kcrawford/dockutil) is included in the resulting .pkg and is licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license. Dockutil is automatically downloaded from the releases section when using the build.sh script, or included if you download one of the DockBuilder Releases.
