@@ -64,7 +64,7 @@ defaultItemsToAdd=(
     "/Applications/MediaInfo.app/"
     "/Applications/System Preferences.app/"
     "/Applications/,--view grid --display folder --sort name"
-    "~/Downloads --sort dateadded"
+    "~/Downloads, --sort dateadded"
 )
 
 ########### It is not necessary to edit beyond this poing, do at your own risk ###########
