@@ -2,17 +2,17 @@
 #shellcheck disable=SC2088,SC2016
 
 # Identifier for the .app and .pkg
-identifier="com.github.ryangball.dockbuilder"
+identifier="org.ldschurch.psd.dockbuilder-GeneralProd"
 
 # Version of the .app and .pkg, you can leave this alone and specify at the command line
 version="1.0"
 
 # Path and filename of the main property list used to store preferences for the .app
-preferenceFileFullPath="/Library/Preferences/com.github.ryangball.dockbuilder.defaults.plist"
+preferenceFileFullPath="/Library/Preferences/org.ldschurch.psd.dockbuilder-GeneralProd.defaults.plist"
 
 # Path to the breadcrumb dropped when DockBuilder runs for a user, this should be in the user's home folder
 # Note: You should keep this in single quotes and don't remove the $HOME environmental variable
-breadcrumb='$HOME/Library/Preferences/com.github.ryangball.dockbuilder.breadcrumb.plist'
+breadcrumb='$HOME/Library/Preferences/org.ldschurch.psd.dockbuilder.breadcrumb.plist'
 
 # Path to the DockBuilder log, this should be in the user's home folder
 # Note: You should keep this in single quotes and don't remove the $HOME environmental variable
@@ -25,7 +25,7 @@ appIcon="/System/Library/CoreServices/Dock.app/Contents/Resources/Dock.icns"
 hideDockWhileBuilding="true" # (true|false)
 
 # If the above variable is set to true, the message below will be displayed
-hideDockMessage="Your Mac's Dock is being built for the first time."
+hideDockMessage="Please wait while the Dock is configured."
 
 # Array to hold all the items we need to add
 # Note: if you need to add options you must seperate the item from the options with a , (comma)
@@ -34,13 +34,18 @@ hideDockMessage="Your Mac's Dock is being built for the first time."
 # the view to grid, the display to stack, and sorts by name.
 # All options available here: https://github.com/kcrawford/dockutil
 defaultItemsToAdd=(
-    "/Applications/System Preferences.app/"
-    "/Applications/Self Service.app/"
+    "/Applications/Launchpad.app/"
+    "/Applications/Mission Control.app/"
+    "/Applications/PSD App Store.app/"
     "/Applications/Safari.app/"
-    "/Applications/Google Chrome.app/"
-    "/Applications/App Store.app/"
-    "/Applications/Utilities/Console.app/"
-    "/Applications/Utilities/Terminal.app/"
+    "/Applications/Microsoft Excel.app/"
+    "/Applications/Microsoft OneNote.app/"
+    "/Applications/Microsoft Outlook.app/"
+    "/Applications/Microsoft PowerPoint.app/"
+    "/Applications/Microsoft Word.app/"
+    "/Applications/OneDrive.app/"
+    "/Applications/Notes.app/"
+    "/Applications/System Preferences.app/"
     "/Applications/,--view grid --display stack --sort name"
     "~/Downloads"
 )
