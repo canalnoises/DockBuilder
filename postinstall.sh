@@ -57,7 +57,7 @@ if who | grep -q console; then
 	LOGGED_IN_UID=$(ls -ln /dev/console | awk '{ print $3 }')
 
 	# use launchctl asuser to run launchctl in the same Mach bootstrap namespace hierachy as the Finder
-	launchctl asuser "$LOGGED_IN_UID" launchctl load /Library/LaunchAgents/com.github.ryangball.dockbuilder.plist
+	launchctl asuser "$LOGGED_IN_UID" launchctl load /Library/LaunchAgents/org.ldschurch.psd.dockbuilder.plist
 fi
 
 touch /Applications/Utilities/DockBuilder.app
