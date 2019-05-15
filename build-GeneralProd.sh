@@ -152,7 +152,7 @@ cp "$PWD/postinstall.sh" /private/tmp/DockBuilder/scripts/postinstall
 chmod +x /private/tmp/DockBuilder/scripts/postinstall
 
 # Copy the LaunchAgent plist to the temp build directory
-cp "$PWD/com.github.ryangball.dockbuilder.plist" "/private/tmp/DockBuilder/files/Library/LaunchAgents/"
+cp "$PWD/org.ldschurch.psd.dockbuilder.plist" "/private/tmp/DockBuilder/files/Library/LaunchAgents/"
 
 # Copy the main preference list to the temp build directory
 cp "$PWD/$preferenceFileName" "/private/tmp/DockBuilder/files/Library/Preferences/"
@@ -172,6 +172,6 @@ echo "Building the PKG..."
     --version "$version" \
     --ownership recommended \
     --component-plist "$PWD/DockBuilder-component.plist" \
-    "$PWD/build/DockBuilder_${version}.pkg"
+    "$PWD/build/DockBuilder_GeneralProd-${version}.pkg"
 
 exit 0
