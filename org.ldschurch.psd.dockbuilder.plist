@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.github.ryangball.dockbuilder</string>
+    <string>org.ldschurch.psd.dockbuilder</string>
     <key>LimitLoadToSessionType</key>
     <string>Aqua</string>
     <key>ProgramArguments</key>
