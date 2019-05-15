@@ -22,7 +22,7 @@ writelog "Looping through all users to ensure Dock will be configured correctly.
 # Run through all normal accounts
 for userName in $(dscl . -list /Users uid | awk '$2 >= 100 && $0 !~ /^_/ { print $1 }'); do
 	userHome=$(/usr/bin/dscl . read "/Users/$userName" NFSHomeDirectory | cut -c 19-)
-	breadcrumb="$userHome/Library/Preferences/com.github.ryangball.dockbuilder.breadcrumb.plist"
+	breadcrumb="$userHome/Library/Preferences/org.ldschurch.psd.dockbuilder.breadcrumb.plist"
 
 	# Check to see if a breadcrumb is already created in the user's home folder
 	if [[ -f "$breadcrumb" ]]; then
