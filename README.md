@@ -25,7 +25,7 @@ DockBuilder allows for the building of a user's Dock based on an organization's 
 To build new versions you can simply run the [build.sh](/build.sh) script and specify a version number for both the .app and .pkg. The resulting .pkg will include the LaunchAgent and .app as well as necessary preinstall/postinstall scripts. If you do not include a version number as a parameter then version 1.0 will be assigned as the default.
 ```bash
 # Clone the repo and traverse into the created directory
-git clone https://github.com/ryangball/DockBuilder.git
+git clone https://github.com/canalnoises/DockBuilder.git
 cd DockBuilder
 
 # At this point you'd customize the variables in the build.sh script
@@ -47,16 +47,16 @@ Some things to keep in mind:
 To test DockBuilder, install the .pkg, then unload/load/start the LaunchAgent.
 ```bash
 # Delete the breadcrumb for the user if it exists
-find ~/Library/Preferences -name com.github.ryangball.dockbuilder.breadcrumb.plist -delete
+find ~/Library/Preferences -name org.ldschurch.psd.dockbuilder.breadcrumb.plist -delete
 
 # Unload the LaunchAgent
-launchctl unload /Library/LaunchAgents/com.github.ryangball.dockbuilder.plist
+launchctl unload /Library/LaunchAgents/org.ldschurch.psd.dockbuilder.plist
 
 # Load the LaunchAgent
-launchctl load /Library/LaunchAgents/com.github.ryangball.dockbuilder.plist
+launchctl load /Library/LaunchAgents/org.ldschurch.psd.dockbuilder.plist
 
 # Start the LaunchAgent (if necessary)
-launchctl start com.github.ryangball.dockbuilder
+launchctl start org.ldschurch.psd.dockbuilder
 
 # Tail the log to see what is occurring
 tail -f ~/Library/Logs/DockBuilder.log
