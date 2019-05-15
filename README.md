@@ -1,6 +1,8 @@
 # DockBuilder
 A LaunchAgent and .app to build a user's Dock upon login and/or on demand.
 
+***DockBuilder was created by [@ryangball](https://github.com/ryangball). This fork contains customizations for use in my environment. If you've stumbled across this repository you should probably [head back to the original](https://github.com/ryangball/DockBuilder).***
+
 DockBuilder allows for the building of a user's Dock based on an organization's needs. DockBuilder eliminates the need for a user template which only allows for a static Dock for all users, and template manipulation can cause issues in newer versions of macOS. DockBuilder not only allows for easy creation of a new user's Dock out of the box, but also has the potential to dynamically set up a different Dock for users based on some criteria; like AD groups for example (you'd have to modify the source based on your criteria).
 
 ## Features
@@ -63,13 +65,13 @@ tail -f ~/Library/Logs/DockBuilder.log
 ```
 
 ## Re-create a User's Dock
-Upon DockBuilder's execution, a breadcrumb is placed into the user's home folder by default: ~/Library/Preferences/com.github.ryangball.dockbuilder.breadcrumb.plist
+Upon DockBuilder's execution, a breadcrumb is placed into the user's home folder by default: ~/Library/Preferences/org.ldschurch.psd.dockbuilder.breadcrumb.plist
 
 In the event that this breadcrumb exists for a user, DockBuilder will exit without any action. To re-create a user's Dock, open terminal as the user and run the following to remove the breadcrumb:
 ```bash
-rm ~/Library/Preferences/com.github.ryangball.dockbuilder.breadcrumb.plist
+rm ~/Library/Preferences/org.ldschurch.psd.dockbuilder.breadcrumb.plist
 ```
-Then you can simply run the /Applications/Utilities/DockBuilder.app or unload/load the LaunchAgent as per the [Testing](https://github.com/ryangball/DockBuilder#Testing) section above.
+Then you can simply run the /Applications/Utilities/DockBuilder.app or unload/load the LaunchAgent as per the [Testing](https://github.com/canalnoises/DockBuilder#Testing) section above.
 
 ## Dockutil
 [Dockutil](https://github.com/kcrawford/dockutil) is included in the resulting .pkg and is licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license. Dockutil is automatically downloaded from the releases section when using the build.sh script, or included if you download one of the DockBuilder Releases.
